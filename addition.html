@@ -8,17 +8,7 @@
 <body>
 
 <div ng-app="myApp" ng-controller="myCtrl">
-     <h3>Using Double Negation</h3>
-
-    <p>First Number:
-        <input type="text" ng-model="a" />
-    </p>
-    <p>Second Number:
-        <input type="text" ng-model="b" />
-    </p>
-    <button id="minus" ng-click="minus()">Minus</button>
-    <!-- <p>Sum: {{ a - b }}</p>  -->
- <p>Sum: {{ sum1 }}</p>
+    
 
     <p>First Number:
         <input type="number" ng-model="c" />
@@ -45,22 +35,11 @@
 <script type="text/javascript">
 	var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
-
-    $scope.minus = function() {     
-
-	    var a = Number($scope.a || 0);
-            var b = Number($scope.b || 0);
-            $scope.sum1 = a-b;
-	   // $scope.sum = $scope.sum1+1; 
-	   alert($scope.sum1);
-    }
-
    $scope.add = function() {     
-
 	    var c = Number($scope.c || 0);
-            var d = Number($scope.d || 0);
+        var d = Number($scope.d || 0);
             $scope.sum2 = c+d;
-	   alert($scope.sum2);
+	   
     }
 });
 
