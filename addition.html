@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+     <h3>Using Double Negation</h3>
+
+    <p>First Number:
+        <input type="text" ng-model="a" />
+    </p>
+    <p>Second Number:
+        <input type="text" ng-model="b" />
+    </p>
+    <button id="minus" ng-click="minus()">Minus</button>
+    <!-- <p>Sum: {{ a - b }}</p>  -->
+ <p>Sum: {{ sum1 }}</p>
+
+    <p>First Number:
+        <input type="number" ng-model="c" />
+    </p>
+    <p>Second Number:
+        <input type="number" ng-model="d" />
+    </p>
+ <button id="minus" ng-click="add()">Add</button>
+    <p>Sum: {{ sum2 }}</p>
+</div>
+
+   
+        
+      
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+
+    $scope.minus = function() {     
+
+	    var a = Number($scope.a || 0);
+            var b = Number($scope.b || 0);
+            $scope.sum1 = a-b;
+	   // $scope.sum = $scope.sum1+1; 
+	   alert($scope.sum1);
+    }
+
+   $scope.add = function() {     
+
+	    var c = Number($scope.c || 0);
+            var d = Number($scope.d || 0);
+            $scope.sum2 = c+d;
+	   alert($scope.sum2);
+    }
+});
+
+</script>
+
+</body>
+</html>
