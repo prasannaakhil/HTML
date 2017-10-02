@@ -7,18 +7,29 @@
 </head>
 <body>
 
-<div ng-app="myApp" ng-controller="myCtrl">
-    
 
+<section>
+	<center>
+	<div ng-app="myApp" ng-controller="myCtrl">
     <p>First Number:
         <input type="number" ng-model="c" />
     </p>
     <p>Second Number:
         <input type="number" ng-model="d" />
     </p>
+    <p>First :
+        <input type="number" ng-model="a" />
+    </p>
+    <p>Second :
+        <input type="number" ng-model="b" />
+    </p>
  <button id="minus" ng-click="add()">Add</button>
     <p>Sum: {{ sum2 }}</p>
-</div>
+    <p>Sum: {{ sum1 }}</p>
+</div></center>
+</section>
+
+
 
    
         
@@ -38,7 +49,10 @@ app.controller('myCtrl', function($scope) {
    $scope.add = function() {     
 	    var c = Number($scope.c || 0);
         var d = Number($scope.d || 0);
-            $scope.sum2 = c+d;
+        var a = Number($scope.a || 0);
+        var b = Number($scope.b || 0);
+            $scope.sum2 =  c+d;
+            $scope.sum1 = a+b;
 	   
     }
 });
