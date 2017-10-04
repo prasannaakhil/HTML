@@ -8,37 +8,32 @@
 <body>
 
 
-<section>
-	<div class="container">
-		<div class="row">
+	<section>
+		<div class="container">
+			<div class="row">
 				<div ng-app="myApp" ng-controller="myCtrl" style="col align-self-center">
-					<p>First Number:
-					<input type="number" ng-model="c" />
-					</p>
-					<p>Second Number:
-					<input type="number" ng-model="d" />
-					</p>
-					<p>First :
-					<input type="number" ng-model="a" />
-					</p>
-					<p>Second :
-					<input type="number" ng-model="b" />
-					</p>
+					<div>
+					<li class="list-group-item list-group-item-primary" style="display: inline-block;">PRICE-1</li> <li class="list-group-item list-group-item-primary" style="display: inline-block;"><input type="number" ng-model="c" /></li>
+				</div>
+				<div>
+					<li class="list-group-item list-group-item-primary" style="display: inline-block;">PRICE-2</li> <li class="list-group-item list-group-item-primary" style="display: inline-block;"><input type="number" ng-model="d" /></li>
+				</div>
+				<div>
+					<li class="list-group-item list-group-item-primary" style="display: inline-block;">TAX-1</li> <li class="list-group-item list-group-item-primary" style="display: inline-block;"><input type="number" ng-model="a" /></li>
+				</div>
+				<div>
+					<li class="list-group-item list-group-item-primary" style="display: inline-block;">TAX-2</li> <li class="list-group-item list-group-item-primary" style="display: inline-block;"><input type="number" ng-model="b" /></li>
+				</div>
 					<button id="minus" ng-click="add()">Add</button>
 					<p>Sum: {{ sum2 }}</p>
 					<p>Sum: {{ sum1 }}</p>
 				</div>
-				</div>
-	</div>
-</section>
+			</div>
+		</div>
+	</section>
 
 
-
-
-   
-        
-      
-
+	
 
 
 
@@ -47,21 +42,21 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	
-<script type="text/javascript">
-	var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-   $scope.add = function() {     
-	    var c = Number($scope.c || 0);
-        var d = Number($scope.d || 0);
-        var a = Number($scope.a || 0);
-        var b = Number($scope.b || 0);
-            $scope.sum2 =  c+d;
-            $scope.sum1 = a+b;
-	   
-    }
-});
+	<script type="text/javascript">
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+			$scope.add = function() {     
+				var c = Number($scope.c || 0);
+				var d = Number($scope.d || 0);
+				var a = Number($scope.a || 0);
+				var b = Number($scope.b || 0);
+				$scope.sum2 =  c+d;
+				$scope.sum1 = a+b;
 
-</script>
+			}
+		});
+
+	</script>
 
 </body>
 </html>
